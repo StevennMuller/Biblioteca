@@ -2,7 +2,6 @@ package br.rafiki.bibliotecaAndroid;
 
 import java.util.List;
 
-import org.apache.http.examples.client.Teste;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -41,19 +40,7 @@ public class ExibirResultados extends Activity {
 					public void onItemClick(AdapterView<?> arg0, View arg1,
 							int arg2, long arg3) {
 						// TODO Auto-generated method stub
-						
-						try {
-							Teste.casa();
-						} catch (Exception e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
-						}//stevenn
-						try {
-							
-						} catch (Exception e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+					new ParserDetails(ExibirResultados.this).execute("oi");
 						
 					}
 		});

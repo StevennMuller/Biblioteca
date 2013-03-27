@@ -3,7 +3,8 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/Samsung/git/Biblioteca/Biblioteca/libs/android-support-v4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Samsung/Desktop/teste.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAFIKI/Documents/GitHub/Biblioteca/Biblioteca/libs/android-support-v4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAFIKI/Documents/GitHub/Biblioteca/Biblioteca/libs/teste.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

@@ -60,6 +60,7 @@ public class ParserSearch extends AsyncTask<String, Void, List<Resultado>> {
 				+ "&rsargs[]=&rsargs[]=%2C&rsargs[]=palavra&rsargs[]=&rsargs[]=&rsargs[]=&rsargs[]=&rsargs[]=&rsargs[]=&rsargs[]=&rsargs[]=obra&rsargs[]=5109bb6450fdb&rsargs[]=";
 		URL url = new URL(link);
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		
 		conn.setReadTimeout(130000 /* milliseconds */);
 		conn.setRequestMethod("GET");
 		conn.setDoInput(true);

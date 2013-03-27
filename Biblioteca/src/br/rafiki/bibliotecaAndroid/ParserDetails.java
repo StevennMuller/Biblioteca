@@ -38,7 +38,14 @@ public class ParserDetails extends AsyncTask<String, Void, List<Resultado>> {
 
 	public List<Resultado> detalhar(String idLivro) throws IOException {
 
-		String link;
+		
+		try {
+			Teste.casa();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		/*String link;
 		String a;
 		String TipoBusca = "L";
 		String Buscar;
@@ -55,7 +62,7 @@ public class ParserDetails extends AsyncTask<String, Void, List<Resultado>> {
 		
 		URL url = new URL(link);
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-		conn.setReadTimeout(30000 /* milliseconds */);
+		conn.setReadTimeout(30000);
 		conn.setRequestMethod("GET");
 		conn.setDoInput(true);
 		conn.connect();
@@ -73,8 +80,8 @@ public class ParserDetails extends AsyncTask<String, Void, List<Resultado>> {
 				break;
 			}
 		}
-		System.out.println(x);
-		return null;
+		System.out.println(x);*/
+		return null;   
 	}
 	
 	@Override
