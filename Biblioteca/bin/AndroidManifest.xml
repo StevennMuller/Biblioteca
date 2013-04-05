@@ -29,6 +29,10 @@
             android:name="br.rafiki.bibliotecaAndroid.ExibirResultados"
             android:label="@string/title_activity_exibir_resultados" >
         </activity>
+        <activity
+            android:name="br.rafiki.bibliotecaAndroid.Detalhes"
+            android:label="@string/title_activity_detalhes" >
+        </activity>
     </application>
 
 </manifest>

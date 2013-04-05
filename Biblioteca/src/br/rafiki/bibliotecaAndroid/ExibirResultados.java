@@ -2,7 +2,6 @@ package br.rafiki.bibliotecaAndroid;
 
 import java.util.List;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,23 +25,23 @@ public class ExibirResultados extends Activity {
 		setContentView(R.layout.activity_exibir_resultados);
 		lvResultado = (ListView) findViewById(R.id.lvResultados);
 		intent = getIntent();
-
 		resultados = (List<Resultado>) intent
 				.getSerializableExtra(MainActivity.MESSAGE_RESULTADOS);
 		listAdapter = new ResultadosAdapter(this, resultados);
 		lvResultado.setAdapter(listAdapter);
-		lvResultado.setOnItemClickListener(new OnItemClickListener(
-				
-				
-				) {
 
-					@Override
-					public void onItemClick(AdapterView<?> arg0, View arg1,
-							int arg2, long arg3) {
-						// TODO Auto-generated method stub
-					new ParserDetails(ExibirResultados.this).execute("oi");
-						
-					}
+		lvResultado.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				Resultado resultado = (Resultado) lvResultado
+						.getItemAtPosition(arg2);
+
+				new ParserDetails(ExibirResultados.this).execute(resultado
+						.getId());
+
+			}
 		});
 	}
 
@@ -52,7 +51,5 @@ public class ExibirResultados extends Activity {
 		getMenuInflater().inflate(R.menu.activity_exibir_resultados, menu);
 		return true;
 	}
-	
-	
 
 }

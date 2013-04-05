@@ -3,55 +3,79 @@
     android:id="@+id/TableLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pergamun"
+    android:background="#266294"
+    android:padding="8dp"
     tools:context=".MainActivity" >
 
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="50dp" >
 
         <TextView
             android:id="@+id/tvTipo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="@string/tvTitulo_text" />
+            android:text="@string/tvTitulo_text"
+            android:textColor="#ffd700"
+            android:textSize="20sp" />
 
         <Spinner
             android:id="@+id/spTpBusca"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2" />
+            android:layout_weight="2"
+            android:background="#76b2e4"
+            android:padding="16dp"
+            android:textSize="20sp" />
 
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="50dp" >
 
         <TextView
             android:id="@+id/tvBusca"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="@string/tvBusca_text" />
+            android:text="@string/tvBusca_text"
+            android:textColor="#ffd700"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/etPesquisa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:background="#76b2e4"
             android:ems="10"
-            android:hint="@string/etPesquisa_text" />
+            android:hint="@string/etPesquisa_text"
+            android:padding="16dp"
+            android:textColorHint="#222" >
+
+            <requestFocus />
+        </EditText>
 
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="0dp" >
 
         <TextView
             android:id="@+id/textView1"
@@ -60,10 +84,13 @@
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="26dp"
+            android:layout_weight="2"
+            android:background="#ffd700"
             android:onClick="Execute"
+            android:padding="0dp"
             android:text="@string/Busca" />
 
     </TableRow>
