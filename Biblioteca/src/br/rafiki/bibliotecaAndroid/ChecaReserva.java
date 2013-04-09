@@ -170,7 +170,7 @@ public class ChecaReserva extends Service {
 		}
 		resposta = builder.toString();
 		
-		if("{}".equals(resposta))
+		if("{}".equals(resposta) || "{\"valido\":\"false\"}".equals(resposta))
 			stopSelf();
 
 		return resposta;
@@ -189,7 +189,7 @@ public class ChecaReserva extends Service {
 		// Actions are just fake
 		Notification noti = new Notification.Builder(this)
 		        .setContentTitle("Livro: "+livro)
-		        .setContentText("Disponível")
+		        .setContentText("Disponï¿½vel")
 		        .setSmallIcon(R.drawable.ic_launcher)
 		        .setContentIntent(pIntent)
 		       .build();
@@ -217,9 +217,9 @@ public class ChecaReserva extends Service {
 				JSONObject reservs = new JSONObject();
 				reservs =  reserva.getJSONObject(i);
 				
-				if(reservs.getString("status").equals("Disponível"))
+				if(reservs.getString("status").equals("Disponï¿½vel"))
 				{
-					//Toast.makeText(context, reservs.getString("livro")+" Disponível", Toast.LENGTH_LONG);
+					//Toast.makeText(context, reservs.getString("livro")+" Disponï¿½vel", Toast.LENGTH_LONG);
 					//System.out.print("Toast Aqui");
 					Notifica(reservs.getString("livro"));
 				}
@@ -229,8 +229,8 @@ public class ChecaReserva extends Service {
 			{
 			JSONObject reserva = new JSONObject();
 			reserva = emprestimosJson.getJSONObject("reservas");
-			if(reserva.getString("status")=="Disponível")
-				//Toast.makeText(context, reserva.getString("livro")+" Disponível", Toast.LENGTH_LONG);
+			if(reserva.getString("status")=="Disponï¿½vel")
+				//Toast.makeText(context, reserva.getString("livro")+" Disponï¿½vel", Toast.LENGTH_LONG);
 				Notifica(reserva.getString("livro"));
 			}
 			catch (JSONException i) {
